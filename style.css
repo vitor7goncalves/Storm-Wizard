@@ -10,6 +10,7 @@
     width: 30%;
     top: 2rem;
     z-index: 15;
+    margin-left: 2rem;
 }
 .config-home li{
     left: 5rem;
@@ -55,16 +56,9 @@
 .config-links a:hover{
     color: #ffffff;
 }
-
-header{
-    position: relative;
-    width: 100%;
-    height: 30%;
-}
-
 .start{
    width: 100%;
-   height: 100%;
+   height: 30rem;
    background-color: #000000;
 }
 
@@ -82,15 +76,18 @@ header{
     }
 }
 .menu{
-    position: absolute;
     width: 100%;
-    height: 5%;
-    bottom: 10rem;
+    height: 3rem;
     background-color: #0b3c5d;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(1, 3rem);
+    row-gap: .2rem;
 }
 .menu li{
 display: inline;
 background-color: #0b3c5d;
+padding-top: .5rem;
 padding-left: 1rem;
 padding-right: 1rem;
 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -105,38 +102,54 @@ border-right: .1rem solid #1d2731;
 }
 .painel-jogos{
     position: absolute;
+    margin-top: 3.1rem;
+    margin-left: .5rem;
     width: 90%;
     height: 10rem;
     opacity: 0;
+    transition: opacity .5s;
+    background-color: #0b3c5d;
 }
 .painel-jogos img{
-    width: 15rem;
+    width: 20rem;
     float: left;
+    margin: 2rem;
+    background-color: #0b3c5d;
     
 }
 .show-menu-jogos .painel-jogos{
-    opacity: 1;
+    opacity: .9;
 }
+
 .painel-eventos{
     position: absolute;
-    width: 20%;
+    margin-top: 3.1rem;
+    margin-left: 3rem;
+    left: 3rem;
+    width: 25rem;
     height: 10rem;
     opacity: 0;
+    background-color: #0b3c5d;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 3rem);
+    row-gap: .2rem;
+    transition: opacity .5s;
 }
 .painel-eventos li{
-    background-color: #1d2731;
-    border-bottom: .1rem solid #0b3c5d;
+    background-color: #0b3c5d;
+    margin: 2rem;
 }
 .painel-eventos a{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: #d98310;
-    background-color: #1d2731;
+    background-color: #0b3c5d;
 }
 .painel-eventos a:hover{
     color: #ffffff;
 }
 .show-menu-eventos .painel-eventos{
-    opacity: 1;
+    opacity: .9;
 }
 
 
