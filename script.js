@@ -1,6 +1,7 @@
-document.querySelector("#jogo").addEventListener("click",function(){
+document.querySelector(".img-magus").addEventListener("click",function(){
 document.querySelector(".master").classList.toggle("show-menu-jogos");
 });
-document.querySelector("#eventos").addEventListener("click",function(){
-document.querySelector(".master").classList.toggle("show-menu-eventos");
-});
+
+document.querySelector(".fechar").addEventListener("click",function(){
+    document.querySelector(".master").classList.toggle("show-menu-jogos");
+    });
