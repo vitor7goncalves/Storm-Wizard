@@ -20,7 +20,7 @@
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 1rem;
     text-transform: uppercase;
-    color: #ffe914;
+    color: #d9b310;
     font-size: 1.5rem;
     text-decoration: none;
     background-color: #000000;
@@ -48,7 +48,7 @@
  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
  font-size: 1rem;
  text-transform: uppercase;
- color: #ffe914;
+ color:  #d9b310;
  font-size: 1.5rem;
  text-decoration: none;
  background-color: #000000;
@@ -85,6 +85,16 @@
         opacity: 1;
     }
 }
+@keyframes diagonal{
+        0%{
+            transform: translateY(.7rem) translateX(.7rem);
+            opacity: 0;
+        }
+        100%{
+            transform: translateY(0) rotateY(0);
+            opacity: 1;
+        }
+}
 .menu{
     width: 100%;
     height: 3rem;
@@ -103,7 +113,7 @@ padding-right: 1rem;
 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 font-size: 1.5rem;
 text-transform: uppercase;
-color: #ffe914;
+color:  #d9b310;
 border-right: .1rem solid #1d2731;
 }
 .jogo{
@@ -136,11 +146,12 @@ border-right: .1rem solid #1d2731;
     margin-left: .5rem;
     margin-right: .5rem;
     width: 90%;
-    height: 13rem;
+    height: 15rem;
     opacity: 0;
     transition: opacity .5s;
-    background-color: rgba(11, 60, 93, .95);
+    background-color: rgba(00, 60, 93, .95);
     visibility: hidden;
+    z-index: 15;
 }
 .img-magus{
     width: 10rem;
@@ -150,8 +161,22 @@ border-right: .1rem solid #1d2731;
     background-color: #0b3c5d;
     cursor: pointer;
 }
+
 .img-magus:hover {
-    border: .1rem solid #ffe914;
+   border: .1rem solid  #d9b310;
+}
+
+.img-magus2{
+    width: 10rem;
+    height: 90%;
+    float: left;
+    margin: 1rem;
+    background-color: #0b3c5d;
+    cursor: pointer;
+}
+
+.img-magus2:hover {
+    border: .1rem solid  #d9b310;
 }
 .info{
     position: absolute;
@@ -166,7 +191,27 @@ border-right: .1rem solid #1d2731;
     visibility: hidden;
     transition: opacity 1s;
 }
+
+.info2{
+    position: absolute;
+    z-index: 25;
+    background: none;
+    bottom: 1rem;
+    left: 5rem;
+    font-size: 1.2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #0b3c5d;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s;
+    margin-left: 12rem;
+}
 .img-magus:hover .info{
+    opacity: 1;
+    visibility: visible;
+    animation: subir 1s;
+}
+.img-magus2:hover .info2{
     opacity: 1;
     visibility: visible;
     animation: subir 1s;
@@ -177,10 +222,21 @@ border-right: .1rem solid #1d2731;
     visibility: hidden;
     z-index: 20;
 }
+.border-special2{
+    top: 1.2rem;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 20;
+}
 .img-magus:hover .border-special{
     opacity: 1;
     visibility: visible;
-    animation: subir 1s;
+    animation: diagonal 1s;
+}
+.img-magus2:hover .border-special2{
+    opacity: 1;
+    visibility: visible;
+    animation: diagonal 1s;
 }
 .painel-jogos img{
     position: absolute;
@@ -212,7 +268,7 @@ border-right: .1rem solid #1d2731;
 }
 .painel-eventos a{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #ffe914;
+    color:  #d9b310;
     background: none;
 }
 .painel-eventos a:hover{
@@ -251,7 +307,7 @@ border-right: .1rem solid #1d2731;
     border-radius: .2rem;
     width: 2rem;
     height: 2rem;
-    background-color: #ffe914;
+    background-color:  #d9b310;
     cursor: pointer;
 }
 .fechar:hover{
@@ -300,14 +356,14 @@ border-right: .1rem solid #1d2731;
     font-weight: 500;
     background: none;
     font-size: 1.5rem;
-    color: #ffe914;
+    color:  #d9b310;
     text-shadow: .8rem .8rem .8rem #000000;
 }
 .info-magus .down{
     border-radius: .5rem;
     width: 7rem;
     height: 3rem;
-    color: #ffe914;
+    color:  #d9b310;
     background-color:  #0b3c5d;
     font-size: 1.1rem;
     font: bold;
@@ -322,7 +378,7 @@ border-right: .1rem solid #1d2731;
 }
 .conteudo p{
     margin: 5rem;
-    color: #ffe914;
+    color:  #d9b310;
     font-size: 1.5rem;
 }
 .footer-social{
@@ -363,7 +419,6 @@ border-right: .1rem solid #1d2731;
     border-radius: 50%;
     grid-column: 4;
     cursor: pointer;
-    z-index: 30;
 }
 
 .social #icon2{
@@ -376,7 +431,6 @@ border-right: .1rem solid #1d2731;
     border-radius: 50%;
     grid-column: 7;
     cursor: pointer;
-    z-index: 30;
 }
 #copyright{
     position: absolute;
@@ -385,7 +439,6 @@ border-right: .1rem solid #1d2731;
     grid-column: 4;
     bottom: 1.7rem;
     left: 7.9rem;
-    opacity: .7;
 }
 .direitos{
     position: absolute;
