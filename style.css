@@ -5,25 +5,28 @@
     list-style: none;
     /*#ffe914,#130f40,#000000,#0b3c5d = 11, 60, 93*/
 }
+.navbar{
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 9;
+}
 .config-home{
     position: absolute;
     width: 30%;
-    top: 2rem;
+    top: -10px;
     z-index: 15;
     margin-left: 2rem;
+    background: none;
 }
 .config-home li{
-    left: 5rem;
-    background-color: #000000;
+    left: 2rem;
+    background: none;
 }
 .config-home a{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 1rem;
-    text-transform: uppercase;
-    color: #d9b310;
-    font-size: 1.5rem;
     text-decoration: none;
-    background-color: #000000;
+    background: none;
    }
 .config-home a:hover{
     color: #ffffff;
@@ -31,41 +34,168 @@
 
 .config-links{
     position: absolute;
-    top: 2rem;
+    top: 1rem;
     z-index: 10;
-    background-color: #000000;
+    background: none;
     width: 100%;
 }
 
 .config-links li {
     float: right;
     list-style-type: none;
-    margin:0 3rem; 
+    margin:0 .7rem; 
     background-color: #000000;
 }
 
  .config-links a{
  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
- font-size: 1rem;
+ font-size: 1.3rem;
  text-transform: uppercase;
  color:  #d9b310;
- font-size: 1.5rem;
  text-decoration: none;
- background-color: #000000;
+ background-color: rgba(0, 0, 0, .7);
 }
 .config-links a:hover{
     color: #ffffff;
 }
-.start{
-   width: 100%;
-   height: 30rem;
-   background-color: #000000;
+.eventos{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color:  #d9b310;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, .7);
+    cursor: pointer;
+}
+.eventos:hover{
+    color: #ffffff;
+}
+.eventos:hover .painel-eventos{
+    opacity: 1;
+    visibility: visible;
+}
+.eventos:hover .arrow{
+    transform: rotate(180deg);
+    border-top: 7px solid #ffffff;
+}
+.painel-eventos{
+    position: absolute;
+    margin-top: 1.7rem;
+    margin-left: 3rem;
+    right: 6rem;
+    width: 25rem;
+    height: 13rem;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(11, 60, 93, .95);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 3rem);
+    row-gap: .2rem;
+    transition: opacity .5s;
+    z-index: 10;
+}
+.painel-eventos a{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:  #d9b310;
+    background: none;
+    z-index: 20;
+}
+.button-eventos{
+    position: absolute;
+    top: 1.8rem;
+    border: none;
+    background: none;
+    width: 100%;
+    height: 2rem;
+    z-index: 3;
+    cursor: pointer;
+}
+.button-eventos:hover{
+    background-color: rgba(255, 238, 1, 0.3);
+}
+.button-eventos:hover  a{
+    color: #ffffff;
+}
+.button-eventos2{
+    position: absolute;
+    top: 5rem;
+    border: none;
+    background: none;
+    width: 100%;
+    height: 2rem;
+    z-index: 3;
+    cursor: pointer;
+}
+.button-eventos2:hover{
+    background-color: rgba(255, 238, 1, 0.3);
+}
+.button-eventos2:hover{
+    color: #ffffff;
 }
 
-.start img{
+.arrow{
+    float: right;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #d9b310;
+    margin: 7px 1rem 0px -5px;
+}
+#language{
+   width: 70px;
+   height: 30px;
+   float: right;
+   background-color: rgba(0, 0, 0);
+   color: #d9b310;
+   margin: 0px 1rem;
+   border-radius: 3px;
+}
+.start{
+   width: 100%;
+   height: 90vh;
+   background: none;
+}
+
+.magus_pocus{
+    position: absolute;
+    top: 0;
     width: 100%;
-    height: 100%;
+    height: 90%;
+    z-index: 7;
     animation: zoom-out 10s;
+   
+}
+.fundo_magus{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    z-index: 1;
+}
+.start h1{
+   position: absolute;
+   color: #ffffff;
+   z-index: 20;
+   top: 20rem;
+   background: none;
+   left: 3rem;
+   text-transform: uppercase;
+   font-size: 57px;
+   animation: zoom-out 3s;
+}
+.start button{
+   position: absolute;
+   width: 15rem;
+   height: 4rem;
+   color: #d9b310;
+   font-size: 17px;
+   z-index: 20;
+   top: 30rem;
+   background-color: #0b3c5d ;
+   left: 3rem;
+   text-transform: uppercase;
+   animation: zoom-out 3s;
 }
 @keyframes zoom-out{
     0%{
@@ -122,12 +252,6 @@ border-right: .1rem solid #1d2731;
     background-color: #0b3c5d;
     border-right: .1rem solid #1d2731;
 }
-.eventos{
-    padding-top: .5rem;
-    columns: 1;
-    background-color: #0b3c5d;
-    border-right: .1rem solid #1d2731;
-}
 .menu li:hover{
     color: #ffffff;
     cursor: pointer;
@@ -136,10 +260,7 @@ border-right: .1rem solid #1d2731;
     opacity: 1;
     visibility: visible;
 }
-.eventos:hover .painel-eventos{
-    opacity: 1;
-    visibility: visible;
-}
+
 .painel-jogos{
     position: absolute;
     margin-top: .72rem;
@@ -244,36 +365,11 @@ border-right: .1rem solid #1d2731;
     height: 90%;   
     background: none;
 }
-
-
-.painel-eventos{
-    position: absolute;
-    margin-top: .72rem;
-    margin-left: 3rem;
-    left: 3rem;
-    width: 25rem;
-    height: 13rem;
-    opacity: 0;
-    visibility: hidden;
-    background-color: rgba(11, 60, 93, .95);
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 3rem);
-    row-gap: .2rem;
-    transition: opacity .5s;
-}
 .painel-eventos li{
     background: none;
     margin: 2rem;
 }
-.painel-eventos a{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color:  #d9b310;
-    background: none;
-}
-.painel-eventos a:hover{
-    color: #ffffff;
-}
+
 .master-magus{
     position: fixed;
     width: 100%;
