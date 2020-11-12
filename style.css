@@ -5,11 +5,14 @@
     list-style: none;
     /*#ffe914,#130f40,#000000,#0b3c5d = 11, 60, 93*/
 }
+.master{
+    background-color: #0f1656;
+}
 .navbar{
     position: absolute;
     width: 100%;
     height: 60px;
-    background-color: rgba(0, 0, 0, .7);
+    background-color: #0c151dd5;
     z-index: 9;
 }
 .config-home{
@@ -44,7 +47,7 @@
     float: right;
     list-style-type: none;
     margin:0 .7rem; 
-    background-color: #000000;
+    background: none;
 }
 
  .config-links a{
@@ -53,19 +56,26 @@
  text-transform: uppercase;
  color:  #d9b310;
  text-decoration: none;
- background-color: rgba(0, 0, 0, .7);
+ background: none;
 }
 .config-links a:hover{
     color: #ffffff;
 }
 .eventos{
+    background: none;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 1.3rem;
     text-transform: uppercase;
     color:  #d9b310;
     text-decoration: none;
-    background-color: rgba(0, 0, 0, .7);
     cursor: pointer;
+}
+.btn-eventos{
+    position: absolute;
+    right: 25.5rem;
+    width: 5rem;
+    height: 2.7rem;
+    opacity: 0;
 }
 .eventos:hover{
     color: #ffffff;
@@ -80,20 +90,22 @@
 }
 .painel-eventos{
     position: absolute;
-    margin-top: 1.7rem;
+    margin-top: 2.7rem;
     margin-left: 3rem;
+    padding-top: 2rem;
     right: 6rem;
     width: 25rem;
     height: 13rem;
     opacity: 0;
     visibility: hidden;
-    background-color: rgba(11, 60, 93, .95);
+    background-color: #0B3c5dd8;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 3rem);
+    grid-template-rows: repeat(2, 2rem);
     row-gap: .2rem;
     transition: opacity .5s;
     z-index: 10;
+    border-bottom: 3px solid #0c151dd5;
 }
 .painel-eventos a{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -105,6 +117,7 @@
     position: absolute;
     top: 1.8rem;
     border: none;
+    border-bottom: 1px solid #0c151dd5;
     background: none;
     width: 100%;
     height: 2rem;
@@ -114,13 +127,11 @@
 .button-eventos:hover{
     background-color: rgba(255, 238, 1, 0.3);
 }
-.button-eventos:hover  a{
-    color: #ffffff;
-}
 .button-eventos2{
     position: absolute;
-    top: 5rem;
+    top: 4rem;
     border: none;
+    border-bottom: 1px solid #0c151dd5;
     background: none;
     width: 100%;
     height: 2rem;
@@ -140,15 +151,26 @@
     border-right: 7px solid transparent;
     border-top: 7px solid #d9b310;
     margin: 7px 1rem 0px -5px;
+    background: none;
 }
 #language{
    width: 70px;
    height: 30px;
    float: right;
-   background-color: rgba(0, 0, 0);
+   background-color: #0c151dd5;
    color: #d9b310;
    margin: 0px 1rem;
+   border: .1px solid #d9b4107c;
    border-radius: 3px;
+}
+#language:hover{
+    color: #ffffff;
+}
+.opt-lang{
+    background-color: #0c151d;
+}
+.opt-lang:hover{
+    color: #ffffff;
 }
 .start{
    width: 100%;
@@ -192,10 +214,17 @@
    font-size: 17px;
    z-index: 20;
    top: 30rem;
-   background-color: #0b3c5d ;
+   background-color: #037bc0 ;
    left: 3rem;
    text-transform: uppercase;
+   text-shadow: 2px 2px 7px #000000;
    animation: zoom-out 3s;
+   border: 1px solid #d9b310;
+   border-radius: 7px;
+   cursor: pointer;
+}
+.start button:hover{
+    background-color: #33aaf8;
 }
 @keyframes zoom-out{
     0%{
@@ -225,270 +254,70 @@
             opacity: 1;
         }
 }
-.menu{
+.bar{
     width: 100%;
-    height: 3rem;
-    background-color: #0b3c5d;
+    height: 2rem;
+    background-color: #0c151d;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(1, 3rem);
     row-gap: .2rem;
 }
-.menu li{
-display: inline;
-background-color: #0b3c5d;
-padding-top: .5rem;
-padding-left: 1rem;
-padding-right: 1rem;
-font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-font-size: 1.5rem;
-text-transform: uppercase;
-color:  #d9b310;
-border-right: .1rem solid #1d2731;
-}
-.jogo{
-    padding-top: .5rem;
-    columns: 1;
-    background-color: #0b3c5d;
-    border-right: .1rem solid #1d2731;
-}
-.menu li:hover{
-    color: #ffffff;
-    cursor: pointer;
-}
-.jogo:hover .painel-jogos{
-    opacity: 1;
-    visibility: visible;
-}
-
-.painel-jogos{
-    position: absolute;
-    margin-top: .72rem;
-    margin-left: .5rem;
-    margin-right: .5rem;
-    width: 90%;
-    height: 15rem;
-    opacity: 0;
-    transition: opacity .5s;
-    background-color: rgba(00, 60, 93, .95);
-    visibility: hidden;
-    z-index: 15;
-}
-.img-magus{
-    width: 10rem;
-    height: 90%;
-    float: left;
-    margin: 1rem;
-    background-color: #0b3c5d;
-    cursor: pointer;
-}
-
-.img-magus:hover {
-   border: .1rem solid  #d9b310;
-}
-
-.img-magus2{
-    width: 10rem;
-    height: 90%;
-    float: left;
-    margin: 1rem;
-    background-color: #0b3c5d;
-    cursor: pointer;
-}
-
-.img-magus2:hover {
-    border: .1rem solid  #d9b310;
-}
-.info{
-    position: absolute;
-    z-index: 25;
-    background: none;
-    bottom: 1rem;
-    left: 5rem;
-    font-size: 1.2rem;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #0b3c5d;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1s;
-}
-
-.info2{
-    position: absolute;
-    z-index: 25;
-    background: none;
-    bottom: 1rem;
-    left: 5rem;
-    font-size: 1.2rem;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #0b3c5d;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1s;
-    margin-left: 12rem;
-}
-.img-magus:hover .info{
-    opacity: 1;
-    visibility: visible;
-    animation: subir 1s;
-}
-.img-magus2:hover .info2{
-    opacity: 1;
-    visibility: visible;
-    animation: subir 1s;
-}
-.border-special{
-    top: 1.2rem;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 20;
-}
-.border-special2{
-    top: 1.2rem;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 20;
-}
-.img-magus:hover .border-special{
-    opacity: 1;
-    visibility: visible;
-    animation: diagonal 1s;
-}
-.img-magus2:hover .border-special2{
-    opacity: 1;
-    visibility: visible;
-    animation: diagonal 1s;
-}
-.painel-jogos img{
-    position: absolute;
-    width: 10rem;
-    height: 90%;   
-    background: none;
-}
-.painel-eventos li{
-    background: none;
-    margin: 2rem;
-}
-
-.master-magus{
-    position: fixed;
+.games{
     width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .7s;
-    z-index: 20;
-    background-color: rgba(0, 0, 0, .8);
+    height: 100vh;
+    background-color: #0f1656;
 }
-.magus-pocus{
-    background-color: #1d2731;
-    width: 50rem;
-    height: 30rem;
-    position: fixed;
-    top: 20%;
-    right: 20%;
-}
-.show-menu-jogos .master-magus{
-    opacity: 1;
-    visibility: visible;
-}
-
-.magus-pocus .fechar{
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 2;
-    border-radius: .2rem;
-    width: 2rem;
-    height: 2rem;
-    background-color:  #d9b310;
-    cursor: pointer;
-}
-.fechar:hover{
-    background-color: #ff0000;
+.games h3{
+    background-color: #0f1656;
     color: #ffffff;
+    font-size: 37px;
+    margin: 2rem 0rem .5rem 10rem;
 }
-.magus-pocus .fundo-img{
-    position: relative;
-    width: 100%;
-    height: 100%;
+.games button{
+   width: 8rem;
+   height: 2rem;
+   color: #d9b310;
+   font-size: 17px;
+   background-color: #037bc0 ;
+   text-transform: uppercase;
+   text-shadow: 2px 2px 7px #000000;
+   border: 1px solid #d9b310;
+   border-radius: 7px;
+   cursor: pointer;
+   margin:0rem 0rem 0rem 6rem;
+   box-shadow: 2px 2px 7px #000000;
 }
-.magus-pocus:hover .fundo-img{
-    opacity: .5;
+.games button:hover{
+    background-color: #33aaf8;
 }
-.char-magus{
-    position: fixed;
-    background: none;
-    width: 30rem;
-    top: 10rem;
-    right: 15rem;
+.line{
+    width: 87%;
+    margin:0rem 0rem 0rem 6rem;
+    opacity: .3;
 }
-.show-menu-jogos .char-magus{
-    animation: zoom-out 10s;
+.img-games{
+    display: flex;
+    background-color: #0f1656;
+    padding-left: 5rem;
 }
-.magus-pocus .info-magus{
-    width: 20rem;
-    height: 25rem;
-    position: absolute;
-    top: 5rem;
-    left: 2rem;
-    background: none;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 2s;
-    
-}
-.magus-pocus:hover .info-magus{
-    visibility: visible;
-    opacity: 1;
-    animation: subir 1s;
-}
-.info-magus p{
-    margin-top: 2.5rem;
-    margin-left: .5rem;
-    margin-bottom: 2rem;
-    font-weight: 500;
-    background: none;
-    font-size: 1.5rem;
-    color:  #d9b310;
-    text-shadow: .8rem .8rem .8rem #000000;
-}
-.info-magus .down{
-    border-radius: .5rem;
-    width: 7rem;
-    height: 3rem;
-    color:  #d9b310;
-    background-color:  #0b3c5d;
-    font-size: 1.1rem;
-    font: bold;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    cursor: pointer;
-    transition: background-color 1s;
-    transition: color 1s;
-    box-shadow: .8rem .5rem .8rem #000000;
-}
-.down:hover{
-    color: #ffffff;
-}
-.conteudo p{
-    margin: 5rem;
-    color:  #d9b310;
-    font-size: 1.5rem;
+.img-games img{
+    width: 200px;
+    height: 400px;
+    margin: 1rem 0rem 2rem 1rem;
 }
 .footer-social{
     position: relative;
     width: 100%;
-    height: 10rem;
+    height: 30rem;
     background-color: #0b3c5d;
     display: grid;
     grid-template-columns: repeat(11, 1fr);
     grid-template-rows: repeat(1,3rem);
 }
 .logo{
-    background-color: #0b3c5d;
-    width: 13rem;
+    background: none;
+    width: 15rem;
     grid-column: 6;
     margin-top: 1rem;
 }
